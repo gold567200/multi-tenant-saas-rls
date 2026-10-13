@@ -1,0 +1,18 @@
+# dependencies
+node_modules/
+
+# next.js
+.next/
+out/
+build/
+
+# environment variables
+.env
+.env.*
+!.env.example
+
+# typescript / misc
+*.tsbuildinfo
+npm-debug.log*
+yarn-error.log*
+.DS_Store

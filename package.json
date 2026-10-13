@@ -1,0 +1,33 @@
+{
+  "name": "multi-tenant-saas-rls",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Multi-tenant data isolation in PostgreSQL enforced with Row-Level Security (RLS), demonstrated through a thin Next.js + TypeScript surface.",
+  "license": "MIT",
+  "author": "Tyler Milam (Golden Rock)",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test tests/isolation.test.ts",
+    "db:up": "docker compose up -d && tsx scripts/setup-db.ts",
+    "db:down": "docker compose down -v",
+    "db:setup": "tsx scripts/setup-db.ts"
+  },
+  "dependencies": {
+    "next": "^16.4.0",
+    "pg": "^8.13.1",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.5",
+    "@types/pg": "^8.11.10",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3"
+  }
+}
